@@ -7,19 +7,22 @@ public class Principal {
         // fernando.profissão = "analista";
 
 
+        
+
         Conta contaDoFernando = new Conta(); 
-        contaDoFernando.titular = new Cliente();
-        contaDoFernando.saldo = 1000;
+        
+        contaDoFernando.setSaldo(1000);
+
+        Cliente fernando = new Cliente();
+        fernando.setNome("Fernando Xavier");
+
+        contaDoFernando.setTitular(fernando);
+
+
         
         
-        System.out.println("Saldo da conta do " + contaDoFernando.titular.nome  + " é: " + contaDoFernando.saldo);
+        
+        System.out.println("Saldo da conta do " + contaDoFernando.getTitular().getNome() + " é: " + contaDoFernando.getSaldo());
 
-
-        contaDoFernando.depositar(1000);
-        contaDoFernando.sacar(500);
-        contaDoFernando.sacar(2500);
-
-        contaDoFernando.saldo -= 11000;
-        System.out.println(contaDoFernando.saldo);
     }
 }
